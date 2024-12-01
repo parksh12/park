@@ -109,12 +109,7 @@
 
 <button onclick="generateRandomPoint()">랜덤 포인트 생성</button>
 
-<div class="translation">
-    생성된 코스를 확인하세요.
-</div>
-<div class="translation-english">
-    Check the generated point.
-</div>
+
 
 <p id="random-point">생성된 코스: </p>
 
@@ -136,8 +131,7 @@
         const selectedCell = document.querySelector(`#game-zone .cell:nth-child(${strikeRandom})`);
         selectedCell.classList.add('highlight');
 
-        // 결과 출력
-        document.getElementById("random-point").textContent = `생성된 포인트: 스트라이크존 ${strikeRandom}`;
+       
     }
 </script>
 
