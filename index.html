@@ -15,9 +15,25 @@
             background-color: #f4f4f4;
             flex-direction: column;
         }
-        #game-zone-container {
-            display: flex;
-            align-items: center;
+        h1 {
+            margin: 10px 0;
+        }
+        h1:first-of-type { /* 한글 제목 스타일 */
+            font-size: 24px; /* 크기를 살짝만 줄임 */
+            color: black; /* 검정색 유지 */
+        }
+        h1:last-of-type { /* 영어 제목 스타일 */
+            font-size: 16px; /* 크기를 확 줄임 */
+            color: gray; /* 회색으로 변경 */
+        }
+        #by-shp98 {
+            margin-top: 5px;
+            font-size: 12px;
+            color: blue;
+            text-decoration: none;
+        }
+        #by-shp98:hover {
+            text-decoration: underline;
         }
         #game-zone {
             width: 300px;
@@ -28,7 +44,6 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, 1fr);
             border: 2px solid #000;
-            margin-left: 40px; /* 스트라이크존과 타자 사이의 간격 */
         }
         #game-zone .cell {
             border: 1px solid #999;
@@ -63,53 +78,24 @@
             font-size: 18px;
             font-weight: bold;
         }
-        .batter {
-            width: 50px;
-            height: 80px;
-            background-color: #4CAF50;
-            border-radius: 10px;
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .batter-left {
-            left: -60px;
-            top: 100px;
-        }
-        .batter-right {
-            right: -60px;
-            top: 100px;
-        }
     </style>
 </head>
 <body>
 
 <h1>랜덤 투구/타격 코스 설정</h1>
 <h1>Random Pitching/Batting Course Selector</h1>
+<a id="by-shp98" href="https://goodstock18.tistory.com/m/entry/Bookmark-Collection" target="_blank">by.shp98</a>
 
-<div id="game-zone-container">
-    <!-- 좌측 타자 -->
-    <div class="batter batter-left">
-        <span>좌 타자</span>
-    </div>
-
-    <div id="game-zone">
-        <div class="cell">1</div>
-        <div class="cell">2</div>
-        <div class="cell">3</div>
-        <div class="cell">4</div>
-        <div class="cell">5</div>
-        <div class="cell">6</div>
-        <div class="cell">7</div>
-        <div class="cell">8</div>
-        <div class="cell">9</div>
-    </div>
-
-    <!-- 우측 타자 -->
-    <div class="batter batter-right">
-        <span>우 타자</span>
-    </div>
+<div id="game-zone">
+    <div class="cell">1</div>
+    <div class="cell">2</div>
+    <div class="cell">3</div>
+    <div class="cell">4</div>
+    <div class="cell">5</div>
+    <div class="cell">6</div>
+    <div class="cell">7</div>
+    <div class="cell">8</div>
+    <div class="cell">9</div>
 </div>
 
 <button onclick="generateRandomPoint()">랜덤 포인트 생성</button>
